@@ -30,6 +30,6 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: make frida-server for arm
-      run: 
+      run: |
         make
         make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
