@@ -32,9 +32,4 @@ jobs:
     - name: make frida-server for arm
       run: |
         make
-        pwd
-        ls
-        git branch
-        python --version
-        cat build/frida-version.h
         make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
