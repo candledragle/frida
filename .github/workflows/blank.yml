@@ -35,5 +35,5 @@ jobs:
         pwd
         ls
         git branch
-        cat build/
+        cat build/frida-version.h
         make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
