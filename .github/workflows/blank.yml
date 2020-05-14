@@ -26,7 +26,7 @@ jobs:
        python-version: '3.6'  
    
     - name: set ndk
-      run: echo "::set-env name={ANDROID_NDK_ROOT}::{$ANDROID_ROOT/ndk-bundle}"
+      run: echo "::set-env name={ANDROID_NDK_ROOT}::{$ANDROID_SDK_ROOT/ndk-bundle}"
 
     - name: pre env setting
       run: |
