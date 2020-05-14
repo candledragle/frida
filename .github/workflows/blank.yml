@@ -23,7 +23,7 @@ jobs:
         submodules: true
     - uses: actions/setup-python@v2
       with:
-       python-version: '3.6'  
+       python-version: '3.5.2'  
    
     - name: set ndk
       run: echo "::set-env name=ANDROID_NDK_ROOT::$ANDROID_SDK_ROOT/ndk-bundle"
@@ -39,6 +39,10 @@ jobs:
     - name: make frida-server for arm
       run: |
        python --version
+       pip --version
+       $ANDROID_NDK_ROOT/ndk-build --version
+       node --version
+       npm --version
        make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
 
     - name: check
