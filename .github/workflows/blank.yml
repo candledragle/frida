@@ -19,10 +19,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    env:
-        ANDROID_NDK_ROOT: ${ANDROID_ROOT}/ndk-bundle
-
-    # Runs a single command using the runners shell
 
     - name: pre env setting
       run: |
@@ -34,4 +30,6 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: make frida-server for arm
+      env:
+       ANDROID_NDK_ROOT: ${ANDROID_ROOT}/ndk-bundle
       run: make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
