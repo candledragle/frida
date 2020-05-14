@@ -21,9 +21,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    #- uses: actions/setup-python@v2
-    #  with:
-    #   python-version: '3.7'  
+    - uses: actions/setup-python@v2
+      with:
+       python-version: '3.7'  
    
     - name: set ndk
       run: echo "::set-env name=ANDROID_NDK_ROOT::$ANDROID_SDK_ROOT/ndk-bundle"
@@ -43,8 +43,9 @@ jobs:
        $ANDROID_NDK_ROOT/ndk-build --version
        node --version
        npm --version
+       git submodule update --init --recursive
+       echo git submodule update result $?
        make --debug=vvv
-       make core-android-arm --debug=vvv
        make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc --debug=vvv
 
     - name: check
