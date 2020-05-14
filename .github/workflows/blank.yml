@@ -37,12 +37,12 @@ jobs:
        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
        sudo apt-get install -y nodejs
         
-       #git clone https://github.com/frida/frida
-       #cd frida
+       git clone https://github.com/frida/frida
+       cd frida
         
        #sed -i 's/git:/https:/g' .gitmodules 
         
-       #git submodule update --init --recursive
+       git submodule update --init --recursive
         
        #echo git submodule update result $?
         
