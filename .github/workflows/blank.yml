@@ -40,7 +40,7 @@ jobs:
        git clone https://github.com/frida/frida
        cd frida
         
-       #sed -i 's/git:/https:/g' .gitmodules 
+       sed -i 's/git:/https:/g' .gitmodules 
         
        git submodule update --init --recursive
         
