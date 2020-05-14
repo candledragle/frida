@@ -32,4 +32,6 @@ jobs:
     - name: make frida-server for arm
       run: |
         make
+        pwd
+        ls
         make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
