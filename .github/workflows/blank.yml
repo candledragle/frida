@@ -25,8 +25,8 @@ jobs:
       with:
        python-version: '3.7'  
    
-    - name: set ndk
-      run: echo "::set-env name=ANDROID_NDK_ROOT::$ANDROID_SDK_ROOT/ndk-bundle"
+    #- name: set ndk
+      #run: echo "::set-env name=ANDROID_NDK_ROOT::$ANDROID_SDK_ROOT/ndk-bundle"
 
     # Runs a set of commands using the runners shell
     - name: make frida-server for arm
@@ -37,21 +37,21 @@ jobs:
        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
        sudo apt-get install -y nodejs
         
-       git clone https://github.com/frida/frida
-       cd frida
+       #git clone https://github.com/frida/frida
+       #cd frida
         
-       sed -i 's/git:/https:/g' .gitmodules 
+       #sed -i 's/git:/https:/g' .gitmodules 
         
-       git submodule update --init --recursive
+       #git submodule update --init --recursive
         
        #echo git submodule update result $?
         
        #make --debug=vvv
         
-       #wget https://dl.google.com/android/repository/android-ndk-r21-linux-x86_64.zip
-       #unzip -q android-ndk-r21-linux-x86_64.zip
+       wget https://dl.google.com/android/repository/android-ndk-r21-linux-x86_64.zip
+       unzip -q android-ndk-r21-linux-x86_64.zip
         
-       #ANDROID_NDK_ROOT=$(pwd)/android-ndk-r21 make core-android-arm --debug=vvv
+       ANDROID_NDK_ROOT=$(pwd)/android-ndk-r21
         
        make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc --debug=vvv -j4
 
