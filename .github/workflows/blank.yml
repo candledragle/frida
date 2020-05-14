@@ -37,7 +37,7 @@ jobs:
     - name: make frida-server for arm
       run: |
         echo $ANDROID_NDK_ROOT
-        ls $ANDROID_NDK_ROOT
+        ls $ANDROID_SDK_ROOT/ndk-bundle
         python --version
         #ndk-build --version
         # make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
