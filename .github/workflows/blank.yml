@@ -22,9 +22,9 @@ jobs:
 
     - name: pre env setting
       run: |
-        update-alternatives --install /usr/bin/python python /usr/bin/python3.6 50
-        apt-get update
-        apt-get install -y build-essential gcc-multilib lib32stdc++-5-dev flex bison
+        sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 50
+        sudo apt-get update
+        sudo apt-get install -y build-essential gcc-multilib lib32stdc++-5-dev flex bison
 
 
 
