@@ -23,7 +23,7 @@ jobs:
         submodules: true
     - uses: actions/setup-python@v2
       with:
-       python-version: '3.5.2'  
+       python-version: '3.7'  
    
     - name: set ndk
       run: echo "::set-env name=ANDROID_NDK_ROOT::$ANDROID_SDK_ROOT/ndk-bundle"
