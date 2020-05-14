@@ -43,7 +43,9 @@ jobs:
        $ANDROID_NDK_ROOT/ndk-build --version
        node --version
        npm --version
-       make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc
+       make --debug=vvv
+       make core-android-arm --debug=vvv
+       make build/frida-android-arm/lib/pkgconfig/frida-core-1.0.pc --debug=vvv
 
     - name: check
       run: |
